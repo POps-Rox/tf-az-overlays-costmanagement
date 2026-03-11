@@ -66,7 +66,7 @@ variable "budget_notification" {
     operator       = string
     threshold      = number
     threshold_type = optional(string)
-    contact_emails = list(string)    
+    contact_emails = list(string)
   }))
   default = null
 }

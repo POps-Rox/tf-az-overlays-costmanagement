@@ -33,7 +33,7 @@ resource "azurerm_consumption_budget_subscription" "sub_budget" {
       threshold_type = notification.value.threshold_type
 
       contact_emails = notification.value.contact_emails
-      contact_roles =  notification.value.contact_roles
+      contact_roles  = notification.value.contact_roles
       contact_groups = notification.value.contact_groups
 
     }
