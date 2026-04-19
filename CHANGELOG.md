@@ -1,8 +1,8 @@
 # Changelog
 
-## [v1.0.1](https://github.com/azurenoops/terraform-azurerm-overlays-cost-management/tree/v1.0.1) (2023-03-11)
+## [v1.0.1](https://github.com/POps-Rox/tf-az-overlays-costmanagement/tree/v1.0.1) (2023-03-11)
 
-## [v1.0.0](https://github.com/azurenoops/terraform-azurerm-overlays-cost-management/tree/v1.0.0) (2023-03-11)
+## [v1.0.0](https://github.com/POps-Rox/tf-az-overlays-costmanagement/tree/v1.0.0) (2023-03-11)
 
 
 
