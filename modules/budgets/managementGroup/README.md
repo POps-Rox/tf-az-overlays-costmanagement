@@ -1,6 +1,6 @@
 # Azure Cost Managmement - Management Group Budget Overlay
 
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/azurenoops/overlays-redis/azurerm/)
+[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/POps-Rox/overlays-costmanagement/azurerm/)
 
 This Overlay terraform module can create a budget for an management group. This module is part of the Azure Cost Management Overlay.
 
@@ -8,7 +8,7 @@ This Overlay terraform module can create a budget for an management group. This 
 
 ```hcl
 module "budgets_management_group" {
-  source = "azurenoops/overlays-budgets/azurerm//modules/managementGroup"
+  source = "POps-Rox/overlays-budgets/azurerm//modules/managementGroup"
   version = "1.0.0"
 
   # Management Group
