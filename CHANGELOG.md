@@ -1,5 +1,26 @@
 # Changelog
 
+## [Unreleased](https://github.com/POps-Rox/terraform-az-overlays-costmanagement/tree/HEAD)
+
+## [v2.0.0] - 2026-05-11
+
+### Changed
+
+- **BREAKING**: Bumped `azurerm` provider to `~> 4.20` (was `~> 3.116`) in all three submodules (`modules/budgets/{resourceGroup,subscription,managementGroup}`) and in all three examples.
+- **BREAKING**: Raised Terraform `required_version` to `>= 1.10` (was `>= 1.9`).
+- Declared `azapi ~> 2.0` in every `versions.tf` for fleet alignment.
+- Added `VERSION` file at `2.0.0`.
+
+### Fixed (pre-existing latent bugs surfaced by the validation gate)
+
+- `modules/budgets/resourceGroup/outputs.tf`: trimmed surrounding spaces from five `output " name "` declarations — Terraform 1.10 rejects whitespace-padded identifier names.
+- `modules/budgets/resourceGroup/main.tf`: neutralized the unreachable `dynamic "filter"` block. The backing `var.budget_filter` is commented out in `variables.tf` and the block referenced an undeclared identifier (`dimension`). The block is now a no-op (`for_each = []`) and documented as needing a `dimension` / `tag` sub-block once the variable is re-enabled.
+
+### Migration notes
+
+- Consumers must set `ARM_SUBSCRIPTION_ID` (or `provider "azurerm" { subscription_id = ... }`) — azurerm 4.x makes this mandatory.
+- The `azurerm_consumption_budget_{resource_group,subscription,management_group}` resources used by this overlay have no 3.x→4.x attribute renames in their actively-used fields.
+
 ## [v1.0.1](https://github.com/POps-Rox/tf-az-overlays-costmanagement/tree/v1.0.1) (2023-03-11)
 
 ## [v1.0.0](https://github.com/POps-Rox/tf-az-overlays-costmanagement/tree/v1.0.0) (2023-03-11)

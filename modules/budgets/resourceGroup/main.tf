@@ -17,11 +17,11 @@ resource "azurerm_consumption_budget_resource_group" "rg_budget" {
   }
 
   dynamic "filter" {
-    for_each = var.budget_filter != null ? [dimension] : []
+    for_each = []
     content {
-      name     = filter.value.name
-      operator = filter.value.operator
-      values   = filter.value.values
+      # filter block disabled — var.budget_filter is commented out in variables.tf.
+      # Re-enable along with the variable and restructure with a `dimension`
+      # or `tag` sub-block (azurerm 4.x requires nested sub-blocks, not flat attributes).
     }
   }
 
